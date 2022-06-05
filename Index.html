@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="FB/jquery-3.2.1.min.js"></script>
+        <script src="FB/raphael.2.1.0.min.js"></script>
+        <script src="FB/justgage.1.0.1.min.js"></script>
+        <script src="FC/FC2_UserManagement.js"></script>
+        
+        <!-- ////////////// GỌI CÁC CSS //////////////  -->
+        <link rel="stylesheet" href= "CSS/login.css">
+        <link rel="stylesheet" href= "CSS/button.css">
+        <link rel="stylesheet" href= "CSS/LUOI_LUOI.css">
+        <link rel="stylesheet" href= "CSS/LUOI_MAY_PHAT.css">
+        <link rel="stylesheet" href= "CSS/Screenbar.css">
+        <title>Scada Webserver</title>
+        <!-- ////////////// CHƯƠNG TRÌNH CON //////////////-->      
+        <script src="FC/FC1_Common.js"></script>   
+    </head>
+    <!-- Phần thân của website -->
+    <body>
+        <div id = "slidebar"> 
+            <!--Nút chọn màn hình 2-->
+            <button class="button" id="btt_Screen_2" onclick=" 
+                    fn_ScreenChange('Screen_2', 'Screen_3');                   
+            ">LƯỚI - LƯỚI</button> 
+            <!--Nút chọn màn hình 3-->
+            <button class="button" id="btt_Screen_3" onclick=" 
+                    fn_ScreenChange('Screen_3', 'Screen_2') ; 
+            ">LƯỚI - MÁY PHÁT</button>  
+                <button id="btt_LL" onclick="setTag('BTT_LL',1)()">L-L</button> 
+                <button id="btt_LG" onclick="setTag('BTT_LG',1)()">L-G</button>  
+        </div>
+    <!-- //////////////Code cho màn hình 2////////////// -->
+    <div id = "Screen_2">  
+        <img src = "images/CAUHINHLUOILUOI.png">
+        <!-- Tạo đèn cho line 1 -->
+        <img id = "Line1_Light" >
+        <!-- Tạo đèn cho line 2 -->
+        <img id = "Line2_Light" >
+        <!-- Tạo đèn cho tải quan trọng -->
+        <img id = "PRIORITY_LOAD" >
+        <!-- Tạo đèn cho tải không quan trọng -->
+        <img id = "NON_PRIORITY_LOAD" >
+
+        <!-- Nút nhấn chọn chế dộ -->
+        <button id="Screen2_btt_Auto_LL" onclick="setTag('BTT_AUTO',1)()">AUTO</button>
+        <button id="Screen2_btt_Manu_LL" onclick="setTag('BTT_MANU',1)()">MANUAL</button>
+       
+        <!-- Nút nhấn bật tắt CB-->
+        <button id="btt_CB1_LL" onclick="setTag('BTT_ON_CB1_LL',1)()">ON</button>
+        <button id="btt_CB2_LL" onclick="setTag('BTT_ON_CB2_LL',1)()">ON</button>
+        <button id="btt_CB3_LL" onclick="setTag('BTT_ON_CB3_LL',1)()">ON</button>
+        <button id="btt_OFF_CB1_LL" onclick="setTag('BTT_OFF_CB1_LL',1)()">OFF</button>
+        <button id="btt_OFF_CB2_LL" onclick="setTag('BTT_OFF_CB2_LL',1)()">OFF</button>
+        <button id="btt_OFF_CB3_LL" onclick="setTag('BTT_OFF_CB3_LL',1)()">OFF</button>
+
+        <!-- Hiển thị điện áp của cấu hình Lưới-Lưới-->
+        <input id="Screen2_tbx_V1N" disabled="disabled" type="text" />    
+        <input id="Screen2_tbx_V2N" disabled="disabled" type="text" />    
+        <input id="Screen2_tbx_F1" disabled="disabled" type="text" />
+        <input id="Screen2_tbx_F2" disabled="disabled" type="text" />
+        <input id="Screen2_tbx_I1" disabled="disabled" type="text" />    
+        <input id="Screen2_tbx_I2" disabled="disabled" type="text" />    
+        <input id="Screen2_tbx_P1" disabled="disabled" type="text" />    
+        <input id="Screen2_tbx_P2" disabled="disabled" type="text" /> 
+        
+        <!-- Nút nhấn lưu-->
+        <button id="Screen2_btt_Save" onmousedown="fn_Saving()">LƯU</button>
+        <!-- Nút nhấn sửa-->
+        <button id="Screen2_btt_Edit" onmousedown="fn_Edditing()">SỬA</button>
+
+        <!-- cài đặt thời gian -->
+        <input id="tbx_SET_TS_LL" disabled="disabled" type="text" />
+        <input id="tbx_SET_TCE_LL" disabled="disabled" type="text" />
+        <input id="tbx_SET_TBS_LL" disabled="disabled" type="text" />
+        <input id="tbx_SET_TCN_LL" disabled="disabled" type="text" />
+
+        <!-- <input id="tbx_HT_TS_LL" disabled="disabled" type="text" />
+        <input id="tbx_HT_TCE_LL" disabled="disabled" type="text" />
+        <input id="tbx_HT_TBS_LL" disabled="disabled" type="text" />
+        <input id="tbx_HT_TCN_LL" disabled="disabled" type="text" /> -->
+
+    </div>
+    <!-- //////////////Code cho màn hình 3////////////// -->
+    <div id = "Screen_3">  
+       <img src = "images/CAUHINHLUOIMAYPHAT.png">
+       <!-- Tạo đèn cho line 1 -->
+       <img id = "Line1_Light_LG" >
+       <!-- Tạo đèn cho line GEN -->
+       <img id = "Line_G_Light" >
+       <!-- Tạo đèn cho tải quan trọng -->
+       <img id = "PRIORITY_LOAD_LG" >
+       <!-- Tạo đèn cho tải không quan trọng -->
+       <img id = "NON_PRIORITY_LOAD_LG" >
+       <!-- Tạo đèn cho CẢNH BÁO -->
+       <img id = "ALARM" >
+       <!-- Tạo đèn cấp dầu -->
+       <img id = "RELAY_FUEL" >
+
+        <!-- Nút nhấn chọn chế dộ -->
+        <button id="Screen3_btt_Auto_LL" onclick="setTag('BTT_AUTO',1)()">AUTO</button>
+        <button id="Screen3_btt_Manu_LL" onclick="setTag('BTT_MANU',1)()">MANUAL</button>
+
+        <!-- Nút nhấn bật tắt CB-->
+        <button id="btt_CB1_LG" onclick="setTag('BTT_ON_CB1_LG',1)()">ON</button>
+        <button id="btt_CB2_LG" onclick="setTag('BTT_ON_CB2_LG',1)()">ON</button>
+        <button id="btt_CB3_LG" onclick="setTag('BTT_ON_CB3_LG',1)()">ON</button>
+        <button id="btt_OFF_CB1_LG" onclick="setTag('BTT_OFF_CB1_LG',1)()">OFF</button>
+        <button id="btt_OFF_CB2_LG" onclick="setTag('BTT_OFF_CB2_LG',1)()">OFF</button>
+        <button id="btt_OFF_CB3_LG" onclick="setTag('BTT_OFF_CB3_LG',1)()">OFF</button>
+
+        <!-- Nút nhấn đề dừng máy phát-->
+        <button id="btt_START_GEN" onclick="setTag('BTT_START_GEN',1)()">START</button>
+        <button id="btt_STOP_GEN" onclick="setTag('BTT_STOP_GEN',1)()">STOP</button>
+
+        <!-- Nút nhấn dừng khẩn cấp, tắt cảnh báo-->
+        <button id="btt_EMERGENCY" onclick="setTag('BTT_EMERGENCY',1)()">EMERGENCY</button>
+        <button id="btt_STOP_ALARM" onclick="setTag('BTT_STOP_ALARM',1)()">STOP ALARM</button>
+         
+        <!-- Hiển thị điện áp của cấu hình Lưới-Máy phát-->
+        <input id="Screen3_tbx_V1N" disabled="disabled" type="text" />    
+        <input id="Screen3_tbx_V3N" disabled="disabled" type="text" />   
+        <input id="Screen3_tbx_I1" disabled="disabled" type="text" />    
+        <input id="Screen3_tbx_I3" disabled="disabled" type="text" /> 
+        <input id="Screen3_tbx_F1" disabled="disabled" type="text" />
+        <input id="Screen3_tbx_F2" disabled="disabled" type="text" />   
+        <input id="Screen3_tbx_P1" disabled="disabled" type="text" />    
+        <input id="Screen3_tbx_P3" disabled="disabled" type="text" />  
+        <!-- Nút nhấn lưu-->
+        <button id="Screen3_btt_Save" onmousedown="fn_Saving1()">LƯU</button>
+        <!-- Nút nhấn sửa-->
+        <button id="Screen3_btt_Edit" onmousedown="fn_Edditing1()">SỬA</button>  
+        
+        <!-- cài đặt thời gian -->
+        <input id="tbx_SET_TS_LG" disabled="disabled" type="text" />
+        <input id="tbx_SET_TCE_LG" disabled="disabled" type="text" />
+        <input id="tbx_SET_TBS_LG" disabled="disabled" type="text" />
+        <input id="tbx_SET_TCN_LG" disabled="disabled" type="text" />
+        <input id="tbx_SET_TGOFF" disabled="disabled" type="text" />
+        <!-- hiển thị thời gian -->
+        <!-- <input id="tbx_HT_TS_LG" disabled="disabled" type="text" />
+        <input id="tbx_HT_TCE_LG" disabled="disabled" type="text" />
+        <input id="tbx_HT_TBS_LG" disabled="disabled" type="text" />
+        <input id="tbx_HT_TCN_LG" disabled="disabled" type="text" />
+        <input id="tbx_HT_TGOFF" disabled="disabled" type="text" /> -->
+   </div>
+    <!-- ////////////// CHƯƠNG TRÌNH ĐĂNG NHẬP HỆ THỐNG //////////////  -->
+    <div id="div_login">
+        <div id="id01" class="modal">
+            <form id = "modal-content1" class="modal-content animate">
+            <div id = "img_container" class="imgcontainer">
+                <span id = "closebtt" onclick="document.getElementById('id01').style.display='none'; logout();" class="close" title="Close Modal">&times;</span>
+                <img id = "img_avatar" src="images/user.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div id = "log_container" class="container">
+                <label for="uname"><b>Username</b></label>
+                <input id = "inputuser" type="text" placeholder="Enter Username" name="uname" required>
+        
+                <label for="psw"><b>Password</b></label>
+                <input id = "inputpass" type="password" placeholder="Enter Password" name="psw" required>
+                
+                <button id = "bttlogin1" type="button" onclick="login();">Login</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+        
+            <div id = "login_container" class="container" style="background-color:#f1f1f1">
+                <button id = "bttcancle" type="button" class="cancelbtn">Cancel</button>
+                <span id = "psw" class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+            </form>
+        </div>
+    </div>
+        </body>
+    </html>

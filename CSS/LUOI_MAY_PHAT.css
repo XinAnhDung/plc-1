@@ -1,0 +1,551 @@
+/*Màn hình 2*/
+#Screen_3 {
+    position: absolute; 
+    left: 215px; top: 11px; 
+    width: 1500px; height: 900px;
+    background-color: rgb(255, 255, 255);   
+}
+#Line1_Light_LG {
+    position: absolute; 
+    left:630px;
+    top: 475px;
+    width: 60px;
+    height: 60px;
+}
+#Line_G_Light {
+    position: absolute; 
+    left: 765px; top: 475px; 
+    width: 60px; height: 60px;
+}
+#PRIORITY_LOAD_LG {
+    position: absolute; 
+    left: 765px; top: 620px; 
+    width: 60px; height: 60px;
+}
+#NON_PRIORITY_LOAD_LG {
+    position: absolute; 
+    left: 630px; top: 620px; 
+    width: 60px; height: 60px;
+}
+#ALARM {
+    position: absolute; 
+    left: 907px; top: 620px; 
+    width: 60px; height: 60px;;
+}
+#RELAY_FUEL {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 907px;
+    top: 475px;
+}
+/*Nút Chọn Chế Độ Manual*/
+#Screen3_btt_Auto_LL {
+    border: none; 
+    background-color: rgb(247, 12, 153); 
+    border: none; color: rgb(0, 0, 0);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 108px;
+    height: 37px;
+    left: 21px;
+    top: 400px;
+}
+#Screen3_btt_Manu_LL {
+    border: none; 
+    background-color: rgb(240, 232, 11); 
+    border: none; color: rgb(0, 0, 0);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 108px;
+    height: 37px;
+    left: 21px;
+    top: 447px;
+}
+/*Nút Nhấn ON CB1*/
+#btt_CB1_LG {
+    border: none; 
+    background-color: rgb(30, 240, 11); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 80px;
+    height: 36px;
+    left: 266px;
+    top: 602px;
+}
+
+/*Nút Nhấn ON CB2*/
+#btt_CB2_LG {
+    border: none; 
+    background-color: rgb(30, 240, 11); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 80px;
+    height: 36px;
+    left: 363px;
+    top: 602px;
+}
+
+/*Nút Nhấn ON CB3*/
+#btt_CB3_LG {
+    border: none; 
+    background-color: rgb(30, 240, 11); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 80px;
+    height: 36px;
+    left: 460px;
+    top: 602px;
+}
+/*Nút Nhấn OFF CB1*/
+#btt_OFF_CB1_LG {
+    border: none; 
+    background-color: rgb(240, 11, 11); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 80px;
+    height: 36px;
+    left: 266px;
+    top: 650px;
+}
+/*Nút Nhấn OFF CB2*/
+#btt_OFF_CB2_LG {
+    border: none; 
+    background-color: rgb(240, 11, 11); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 80px;
+    height: 36px;
+    left: 363px;
+    top: 650px;
+}
+/*Nút Nhấn OFF CB3*/
+#btt_OFF_CB3_LG {
+    border: none; 
+    background-color: rgb(240, 11, 11); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 80px;
+    height: 36px;
+    left: 460px;
+    top: 650px;
+}
+/*Nút Nhấn khởi động máy phát*/
+#btt_START_GEN {
+    border: none; 
+    background-color: rgb(0, 211, 18); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 155px;
+    height: 33px;
+    left: 45px;
+    top: 552px;
+}
+
+/*Nút Nhấn DỪNG máy phát*/
+#btt_STOP_GEN {
+    border: none; 
+    background-color: rgb(240, 11, 11); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 155px;
+    height: 33px;
+    left: 45px;
+    top: 592px;
+}
+/*Nút Nhấn DỪNG KHẨN CẤP*/
+#btt_EMERGENCY {
+    border: none; 
+    background-color: rgb(240, 11, 11); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 155px;
+    height: 33px;
+    left: 45px;
+    top: 632px;
+}
+
+/*Nút Nhấn DỪNG CẢNH BÁO*/
+#btt_STOP_ALARM {
+    border: none; 
+    background-color: rgb(240, 209, 11); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 155px;
+    height: 33px;
+    left: 45px;
+    top: 672px;
+}
+#Screen3_tbx_V1N{
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 25px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 110px;
+    height: 38px;
+    left: 204px;
+    top: 133px;
+}
+#Screen3_tbx_V3N{
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 25px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 110px;
+    height: 38px;
+    left: 836px;
+    top: 133px;
+}
+#Screen3_tbx_F1{
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 25px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 110px;
+    height: 38px;
+    left: 204px;
+    top: 235px;
+}
+#Screen3_tbx_F2{
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 25px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 110px;
+    height: 38px;
+    left: 836px;
+    top: 235px;
+}
+#Screen3_tbx_I1 {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 25px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 110px;
+    height: 38px;
+    left: 204px;
+    top: 184px;
+}
+#Screen3_tbx_I3 {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 25px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 110px;
+    height: 38px;
+    left: 836px;
+    top: 184px;
+}
+#Screen3_tbx_P1{
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 25px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 110px;
+    height: 38px;
+    left: 204px;
+    top: 286px;
+}
+#Screen3_tbx_P3 {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 25px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 110px;
+    height: 38px;
+    left: 836px;
+    top: 286px;
+}
+#tbx_SET_TS_LG {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 65px;
+    height: 34px;
+    left: 215px;
+    top: 395px;
+}
+#tbx_SET_TCE_LG {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 65px;
+    height: 34px;
+    left: 215px;
+    top: 444px;
+}
+#tbx_SET_TBS_LG {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 65px;
+    height: 34px;
+   left: 347px;
+    top: 395px;}
+#tbx_SET_TCN_LG {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 65px;
+    height: 34px;
+    left: 347px;
+    top: 444px;
+}
+#tbx_SET_TGOFF {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 65px;
+    height: 34px;
+    left: 497px;
+    top: 395px;
+}
+/*Nút nhấn sửa*/
+#Screen3_btt_Edit {
+    border: none;
+    background-color: rgb(252, 6, 6);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute;
+    width: 66px;
+    height: 34px;
+    left: 461px;
+    top: 446px;
+}
+
+/*Nút nhấn lưu*/
+#Screen3_btt_Save {
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute;
+    width: 66px;
+    height: 35px;
+    left: 461px;
+    top: 447px;
+}
+/* HIỂN THỊ CÀI ĐẶT THỜI GIAN */
+#tbx_HT_TS_LG {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 90px;
+    height: 28px;
+    left: 594px;
+    top: 421px;
+}
+#tbx_HT_TCE_LG {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 90px;
+    height: 28px;
+    left: 594px;
+    top: 484px;
+}
+#tbx_HT_TBS_LG {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 90px;
+    height: 28px;
+    left: 594px;
+    top: 547px;
+}
+#tbx_HT_TCN_LG {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 90px;
+    height: 28px;
+    left: 594px;
+    top: 610px;
+}
+#tbx_HT_TGOFF {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    border: none; color: rgb(4, 33, 254);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 15px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 90px;
+    height: 28px;
+    left: 594px;
+    top: 677px;
+}
+
+#image1 {  
+    border-radius: 50%;
+    padding: 10px;
+    background: #218018;
+    order: 2px solid rgb(18, 17, 17);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 45px;
+    top: 700px;
+ }

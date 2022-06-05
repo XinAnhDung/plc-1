@@ -1,0 +1,72 @@
+
+/*Slide bar chính*/
+#slidebar {
+    position: absolute; 
+    left: 5px; top: 11px; 
+    width: 198px; height: 710px;
+    background-color: rgb(40, 58, 107); 
+}
+/*Nút Màn 2*/
+#btt_Screen_2 {
+    border: none; 
+    background-color: rgb(11, 167, 240); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 150px;
+    height: 40px; 
+    left: 22px;
+    top: 100px;
+}
+/*Nút Màn 2*/
+#btt_Screen_3 {
+    border: none; 
+    background-color: rgb(11, 167, 240); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 150px; 
+    height: 40px; 
+    left: 22px; 
+    top: 200px;
+}
+/* CHỌN CẤU HÌNH LƯỚI - LƯỚI */
+#btt_LL {
+    border: none; 
+    background-color: rgb(247, 132, 9); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 150px; 
+    height: 40px; 
+    left: 22px; 
+    top: 150px;
+}
+/* CHỌN CẤU HÌNH LƯỚI - MÁY PHÁT */
+#btt_LG {
+    border: none; 
+    background-color: rgb(247, 132, 9); 
+    border: none; color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute; 
+    width: 150px; 
+    height: 40px; 
+    left: 22px; 
+    top: 248px;
+}
